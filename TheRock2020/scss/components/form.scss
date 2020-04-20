@@ -1,0 +1,51 @@
+
+/******************************FORM***********************************/ 
+
+.form__container {
+  width: 100%;
+  max-height: 94%;
+  margin: 2rem auto;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  padding: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .form__container {
+    width: 94%;
+  }
+}
+
+.form__text {
+  font-size: 2.2rem;
+  color: #fff;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.hero__form input {
+  display: block;
+  margin: 2rem 0;
+  width: 100%;
+  padding: 1rem;
+  font-size: 2rem;
+  font-family: inherit;
+}
+
+.form__button {
+  padding: 2rem;
+  width: 100%;
+  background-color: var(--red-main);
+  border: var(--red-main) 2px solid;
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 500;
+  font-family: inherit;
+
+  &:hover {
+    background-color: #ff4804;
+    border: #ff4804 2px solid;
+    cursor: pointer;
+  }
+}

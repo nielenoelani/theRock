@@ -1,0 +1,109 @@
+
+/******************************EVENTS***********************************/ 
+
+.events {
+  height: 100vh;
+  margin-top: 6rem;
+  padding-top: 4rem;
+  background-image: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.75),
+      rgba(255, 255, 255, 0.75)
+    ),
+    url(img/americanFlag.jpg);
+  background-size: cover;
+
+  &__container {
+    height: auto;
+    margin: 4rem auto;
+    width: 94%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &__movie {
+      padding: 2rem 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .events {
+    height: 90rem;
+  }
+
+  .events__container {
+    flex-direction: column;
+    width: 88%;
+  }
+
+  .events__movie {
+    height: 30rem;
+    width: 68% !important;
+    margin: 1.5rem 0;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .events__movie {
+    width: 88% !important;
+  }
+}
+
+/******************************QUOTES***********************************/ 
+
+.quotes {
+  height: auto;
+  margin-top: 6rem;
+  padding-top: 6rem;
+  background-color: #fff;
+
+  &__container {
+    margin-top: 2rem;
+    width: 100%;
+  }
+
+  &__quote {
+    font-size: 2.5rem;
+    font-weight: 500;
+    padding: 2rem;
+    width: 80%;
+    margin: 2rem 0;
+    color: #fff;
+
+    &--left {
+      background-color: var(--red-main);
+      float: left;
+    }
+
+    &--right {
+      background-color: var(--blue-main);
+      float: right;
+      text-align: left;
+    }
+
+    &--black {
+      background-color: #000;
+    }
+  }
+}
+
+
+/******************************SPANISH***********************************/ 
+
+
+.spanish__hero {
+  height: 100vh;
+  position: relative;
+  background-color: var(--blue-main);
+}
+
+.spanish__heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff !important;
+}
+
+

@@ -1,0 +1,100 @@
+
+/******************************BUTTONS***********************************/ 
+
+.button__small--red {
+  display: inline-block;
+  color: #fff;
+  background-color: var(--red-main) !important;
+  padding: 1rem 2rem;
+  border-radius: 4rem;
+  text-decoration: none;
+  margin-right: 4rem;
+  margin-left: 0;
+  transition: all 0.5s;
+  box-shadow: none;
+  font-size: 1.8rem;
+  font-weight: 700;
+  animation: button-grow 1.5s infinite;
+
+  &:hover {
+    color: #fff;
+    margin-top: -3px;
+    box-shadow: 0.5rem 0.75rem 1.5rem rgba(0, 0, 0, 0.5);
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .button__small--red {
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    margin-right: 0;
+    margin-left: 1rem;
+  }
+}
+
+.button__large--red {
+  display: inline-block;
+  font-size: 2.4rem;
+  font-weight: bolder;
+  color: #fff;
+  background: var(--red-main);
+  padding: 3rem;
+  border-radius: 6rem;
+  text-decoration: none;
+  transition: all 0.5s;
+  position: absolute;
+  top: 67%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  &:hover {
+    color: #fff;
+    margin-top: -3px;
+    box-shadow: 0.5rem 0.75rem 1.5rem rgba(0, 0, 0, 0.5);
+  }
+
+  &:active {
+    margin: 0;
+    box-shadow: none;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .button__large--red {
+    padding: 2rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .button__large--red {
+    width: 80%;
+    padding: 1.5rem 3rem;
+    font-size: 2rem;
+  }
+}
+
+.button__medium--red {
+  text-decoration: none;
+  background-color: var(--red-main);
+  padding: 2rem 3.5rem;
+  color: #fff;
+  border-radius: 4rem;
+  font-size: 2rem;
+  font-weight: 700;
+  transition: all 0.5s;
+
+  &:hover {
+    color: #fff;
+    margin-top: -3px;
+    box-shadow: 0.5rem 0.75rem 1.5rem rgba(0, 0, 0, 0.5);
+  }
+
+  &:active {
+    margin: 0;
+    box-shadow: none;
+  }
+}

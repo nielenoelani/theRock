@@ -1,0 +1,833 @@
+:root {
+  --blue-main: rgb(16, 48, 145);
+  --red-main: #c61919; }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 50%;
+  font-family: "Montserrat", sans-serif; }
+
+body {
+  position: relative; }
+
+/******************************HEADER AND NAVIGATION***********************************/
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  height: 6rem;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+  z-index: 100; }
+
+.header__logo {
+  height: 4rem;
+  margin-left: 4rem; }
+
+.nav__navigation {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.nav__btn-toggle {
+  display: none;
+}
+
+.nav__link {
+  display: block;
+  color: var(--blue-main);
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.6s;
+  margin: 0 2rem; }
+  .nav__link:hover {
+    color: var(--red-main); }
+
+@media only screen and (max-width: 980px) {
+  .nav__link {
+    font-size: 1.6rem;
+    margin: 0 1rem; } }
+
+@media only screen and (max-width: 768px) {
+  .nav__navigation {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    top: 6rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+  }
+
+  .nav__item {
+    text-align: center;
+    margin: 3rem auto;
+    margin-right: 2rem;
+    padding: 0 25rem; /* To eliminate 100% spread of hover effect */
+  }
+
+  .nav__link {
+    font-size: 2.5rem;
+    margin: 0 0.75rem;}
+
+  .nav__btn-toggle {
+    position: absolute;
+    left: 50%; 
+    transform: translateX(-85%);
+    display: inline-block;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--blue-main); }
+
+  .nav__link {
+    margin-top: 1.5rem;
+    
+  }
+  .nav__show-nav,
+  .nav__show-nav--quotes {
+    display: block;}}
+
+@media only screen and (max-width: 480px) {
+  .nav__item {
+    padding: 0 15rem; /* To eliminate spread of hover effect */
+  }}
+
+@media only screen and (max-width: 360px) {
+  .nav__item {
+    padding: 0 5rem; /* To eliminate spread of hover effect */
+  }}
+
+/******************************FOOTER***********************************/
+.footer {
+  width: 100vw;
+  background-color: var(--blue-main);
+  padding: 4rem 8rem;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .footer__nav {
+    list-style: none;
+    font-size: 1.5rem;
+    text-transform: capitalize; }
+  .footer__link {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem; }
+  .footer__link:link, .footer__link:active, .footer__link:visited {
+    text-decoration: none;
+    color: #fff; }
+  .footer__link:hover {
+    color: var(--red-main); }
+  .footer__list-item--sl {
+    display: inline-block;
+    margin-right: 4rem; }
+  .footer__logo {
+    width: 3rem;
+    height: 3rem;
+    color: #fff; }
+
+.logo-tmw {
+  height: 16rem;
+  margin-right: -4rem; }
+
+.logo-tmw:hover {
+  opacity: 0.72; }
+
+.copyright {
+  margin-top: 2rem;
+  color: #fff; }
+
+.copyright__link:link,
+.copyright__link:active,
+.copyright__link:visited {
+  font-weight: 700;
+  color: #fff; }
+  .copyright__link:link:hover,
+  .copyright__link:active:hover,
+  .copyright__link:visited:hover {
+    color: var(--red-main); }
+
+.logo-facebook:hover {
+  color: #3b5998; }
+
+.logo-twitter:hover {
+  color: #00aced; }
+
+.logo-instagram:hover {
+  color: #ff51c0; }
+
+.logo-youtube:hover {
+  color: red; }
+
+@media only screen and (max-width: 768px) {
+  .footer {
+    padding: 1.5rem 3rem; }
+  .footer__link {
+    font-size: 1.6rem; }
+  .footer__logo {
+    width: 2rem;
+    height: 2rem; }
+  .logo-tmw {
+    height: 12rem;
+    margin-right: -2rem; }
+  .copyright {
+    margin-top: 0.5rem; } }
+
+@media only screen and (max-width: 600px) {
+  .footer {
+    display: inline-block;
+    text-align: center; }
+  .footer__list-item--sl {
+    margin: 0 1rem; } }
+
+/******************************HERO***********************************/
+.hero {
+  height: calc(100vh - 5rem);
+  margin-top: 6rem;
+  background-image: linear-gradient(to right, var(--blue-main), rgba(16, 48, 145, 0.85) 28%, rgba(16, 48, 145, 0.85) 28%, transparent 35%), url(img/TheRock2020pic1.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  font-family: "Raleway", sans-serif; }
+  .hero__container {
+    width: 25%;
+    margin-left: 2rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); }
+  .hero__box {
+    padding: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    font-weight: 500; }
+  .hero__star-container--white {
+    background-color: var(--red-main);
+    height: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+  .hero__star--white {
+    display: inline-block;
+    height: 1.5rem; }
+  .hero__primary-heading {
+    display: inline-block;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 1.5px; }
+  @media only screen and (max-width: 1600px) {
+    .hero__container {
+      width: 28%; } }
+  @media only screen and (max-width: 1395px) {
+    .hero__primary-heading {
+      font-size: 2.5rem; } }
+  @media only screen and (max-width: 1190px) {
+    .hero__container {
+      width: 30%;
+      margin-left: 1rem; }
+    .hero__primary-heading {
+      font-size: 2.3rem; } }
+  @media only screen and (max-width: 1050px) {
+    .hero__container {
+      width: 32%;
+      margin-left: 1.5rem; }
+    .hero__primary-heading {
+      font-size: 2.1rem; } }
+  @media only screen and (max-width: 900px) {
+    .hero__container {
+      width: 35%; } }
+  @media only screen and (max-width: 828px) {
+    .hero__container {
+      width: 40%; } }
+  .hero__star-container--red {
+    background-color: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    margin: 0 auto; }
+  .hero__star--red {
+    display: inline-block;
+    height: 1.2rem;
+    margin-top: -1.2rem;}
+  .hero__last-name {
+    display: inline-block; }
+  .hero__secondary-heading {
+    margin-top: -1.2rem;
+    font-size: 5rem;
+    color: #fff; }
+  @media only screen and (max-width: 1050px) {
+    .hero__secondary-heading {
+      font-size: 4rem; } }
+  .hero__text {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 500; }
+
+hr {
+  height: 5px;
+  width: 100%;
+  background-color: var(--red-main);
+  border: none; }
+
+@media only screen and (max-width: 900px) {
+  .hero {
+    background-image: linear-gradient(to right, var(--blue-main), rgba(16, 48, 145, 0.85) 40%, rgba(16, 48, 145, 0.85) 40%, transparent 50%), url(img/TheRock2020pic1.jpg); } }
+
+@media only screen and (max-width: 700px) {
+  hr {
+    margin: 0 auto;
+    width: 84%; } }
+
+@media only screen and (max-width: 600px) {
+  .hero {
+    background-image: none;
+    background-color: var(--blue-main); }
+  .hero__container {
+    height: auto;
+    width: 100%;
+    padding: 2rem;
+    margin: 0;
+    background-color: var(--blue-main); }
+  .hero__primary-heading {
+    font-size: 2.5rem; }
+  .hero__secondary-heading {
+    font-size: 3.5rem; }
+  .hero__star--red {
+    display: inline-block;
+    height: 1.2rem;
+    margin-top: -2.2rem; }
+  hr {
+    margin-bottom: 5px; } }
+
+/******************************ABOUT SECTION - WHO IS THE ROCK?***********************************/
+.about {
+  height: auto;
+  background-color: #fff;
+  padding: 10rem;
+  color: #000;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), url(img/americanFlagHorizontal.jpg);
+  background-size: cover; }
+  .about__box {
+    display: flex;
+    margin-top: 8rem;
+    justify-content: space-between;
+    align-items: center; }
+  .about__video {
+    width: 50%;
+    padding: 2rem; }
+  .about__text {
+    width: 50%;
+    text-align: center;
+    font-weight: bold; }
+  .about__primary-heading {
+    font-size: 4rem;
+    width: 80%;
+    margin: 0 auto; }
+  .about__secondary-heading {
+    width: 80%;
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 1rem auto;
+    text-align: justify; }
+
+@media only screen and (max-width: 800px) {
+  .about__box {
+    flex-direction: column;
+    margin-top: 6rem; }
+  .about__video {
+    width: 100%;
+    order: 1; }
+  .about__text {
+    order: 2;
+    width: 100%; } }
+
+@media only screen and (max-width: 800px) {
+  .about {
+    padding: 2rem;
+    padding-top: 4rem; }
+  .about__box {
+    margin: 2rem auto; }
+  .about__primary-heading {
+    font-size: 2.5rem; }
+  .about__secondary-heading {
+    font-size: 1.8rem; } }
+
+/******************************GALLERY PICTURES SECTION***********************************/
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  max-width: 100vw;
+  max-height: 100vh;
+  grid-template-areas: "one three four" "two three five"; }
+  .gallery__item {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative; }
+  .gallery__image {
+    width: 100%;
+    height: 100%;
+    transition: all 0.8s; }
+    .gallery__image:hover {
+      transform: scale(1.1); }
+    .gallery__image:hover ~ .gallery__image-description {
+      opacity: 0; }
+  .gallery__image-description {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    font-family: "Raleway", sans-serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    padding: 1.6rem 0;
+    transition: all 0.8s;
+    text-transform: capitalize; }
+
+.gallery__item--1 {
+  grid-area: one; }
+
+.gallery__item--2 {
+  grid-area: two; }
+
+.gallery__item--3 {
+  grid-area: three; }
+
+.gallery__item--4 {
+  grid-area: four; }
+
+.gallery__item--5 {
+  grid-area: five; }
+
+@media only screen and (max-width: 800px) {
+  .gallery {
+    display: none; } }
+
+/******************************JUMBO QUOTE PAGE WITH BLUE BACKGROUND***********************************/
+.quote {
+  height: 100vh;
+  background: var(--blue-main);
+  text-align: center;
+  color: #fff;
+  position: relative; }
+  .quote__jumbo {
+    width: 84%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 5.2rem;
+    font-weight: 800; }
+
+@media only screen and (max-width: 800px) {
+  .quote__jumbo {
+    width: 90%;
+    font-size: 4.5rem; } }
+
+@media only screen and (max-width: 600px) {
+  .quote__jumbo {
+    height: 80vh;
+    font-size: 3rem;
+    top: 10%; } }
+
+/******************************ISSUES section WITH CARDS***********************************/
+.issues {
+  height: auto;
+  padding: 10rem 6rem;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), url(img/americanFlagHorizontal.jpg); }
+  .issues__container {
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+  .issues__box {
+    height: auto;
+    width: 32%;
+    margin: 2rem;
+    box-shadow: 0.5rem 0.75rem 1.5rem rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #fff; }
+  .issues__image {
+    display: block;
+    width: 100%;
+    height: 24rem;
+    background-size: cover; }
+  .issues__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 2rem 0 1.5rem 2rem;
+    text-align: left;
+    font-family: "Raleway", sans-serif; }
+  .issues__text {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.8rem;
+    text-align: justify;
+    hyphens: auto;
+    padding: 0 2rem 2rem 2rem;
+    line-height: 1.4;
+    height: auto; }
+
+@media only screen and (max-width: 980px) {
+  .issues__box {
+    width: 80%;
+    margin: 3rem auto; }
+  .issues__container {
+    width: 100%;
+    flex-direction: column; }
+  .issues__image {
+    height: auto; } }
+
+@media only screen and (max-width: 600px) {
+  .issues {
+    padding: 2rem; }
+  .issues__box {
+    width: 100%;
+    margin: 2rem auto; }
+  .issues__text {
+    line-height: 1.2;
+    font-size: 1.5rem; } }
+
+@media only screen and (min-width: 1500px) {
+  .issues__container {
+    width: 80%;
+    margin: 0 auto; }
+  .issues__box {
+    margin: 4rem; } }
+
+/******************************UPCOMING EVENTS - HALF PAGE TEXT/HALF PAGE IMAGE***********************************/
+.upcoming-events {
+  height: auto;
+  display: flex;
+  background: var(--blue-main); }
+  .upcoming-events__heading-box {
+    width: 50%;
+    color: #fff;
+    position: relative; }
+  .upcoming-events__inside-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; }
+  .upcoming-events__image {
+    height: calc(100vh + 6rem);
+    width: 50%; }
+
+@media only screen and (max-width: 980px) {
+  .upcoming-events__image {
+    width: 60%; }
+  .section__primary-heading--left {
+    font-size: 5rem; } }
+
+@media only screen and (max-width: 768px) {
+  .upcoming-events {
+    flex-direction: column; }
+  .upcoming-events__heading-box {
+    width: 100%;
+    background: var(--blue-main);
+    height: 80vh; }
+  .upcoming-events__image {
+    height: auto;
+    width: 100%; } }
+
+@media only screen and (max-width: 600px) {
+  .upcoming-events__heading-box {
+    width: 100%;
+    height: 70vh; } }
+
+/******************************DONATIONS SECTION - HALF PAGE***********************************/
+.donate {
+  height: 44vh;
+  width: 100%;
+  background-color: var(--red-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6em; }
+
+.section__primary-heading--donations {
+  width: 50%;
+  color: #fff !important; }
+
+.section__secondary-heading--donations {
+  width: 50%;
+  color: #fff;
+  text-align: justify;
+  hyphens: auto;
+  font-size: 2rem; }
+
+@media only screen and (max-width: 980px) {
+  .donate {
+    padding-top: 4rem; }
+  .section__primary-heading--donations {
+    font-size: 4rem; }
+  .section__secondary-heading--donations {
+    width: 60%;
+    font-size: 1.8rem; } }
+
+@media only screen and (max-width: 768px) {
+  .donate {
+    flex-direction: column; }
+  .section__primary-heading--donations {
+    width: 100%;
+    margin-bottom: 4rem; }
+  .section__secondary-heading--donations {
+    width: 100%;
+    margin-bottom: 2rem; } }
+
+@media only screen and (max-width: 600px) {
+  .donate {
+    padding: 3rem;
+    height: 60vh; } }
+
+/******************************SEPARATE EVENTS PAGE WITH YOUTUBE VIDEOS***********************************/
+.events {
+  height: 100vh;
+  margin-top: 7rem;
+  padding-top: 4rem;
+  background-color: #f9f9f9;
+  background-size: cover; }
+  .events__container {
+    height: auto;
+    margin: 4rem auto;
+    width: 94%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+    .events__container__movie {
+      padding: 1rem 0; }
+
+@media only screen and (max-width: 1000px) {
+  .events {
+    height: auto;
+    padding: 1rem; }
+  .events__container {
+    margin: 1rem auto;
+    flex-direction: column;
+    width: 88%; }
+  .events__movie {
+    height: 40rem;
+    width: 72% !important;
+    margin: 4rem 0; } }
+
+@media only screen and (max-width: 560px) {
+  .events__movie {
+    width: 88% !important; } }
+
+/******************************SEPARATE QUOTES PAGE***********************************/
+.quotes {
+  height: auto;
+  margin-top: 6rem;
+  padding-top: 2rem;
+  background-color: #fff; }
+  .quotes__container {
+    margin-top: 0.5rem;
+    width: 100%; }
+  .quotes__quote {
+    font-size: 2.5rem;
+    font-weight: 500;
+    padding: 2rem;
+    width: 80%;
+    margin: 2rem 0;
+    color: #fff; }
+    .quotes__quote--left {
+      background-color: var(--red-main);
+      float: left; }
+    .quotes__quote--right {
+      background-color: var(--blue-main);
+      float: right;
+      text-align: left; }
+    .quotes__quote--black {
+      background-color: #000; }
+
+/******************************SEPARATE SPANISH PAGE (COMING SOON)***********************************/
+.spanish__hero {
+  height: 100vh;
+  position: relative;
+  background-color: var(--blue-main); }
+
+.spanish__heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff !important; }
+
+.section__primary-heading {
+  font-size: 6rem;
+  text-align: center;
+  color: #000; }
+  .section__primary-heading--left {
+    text-align: left;
+    color: #fff;
+    margin-bottom: 1rem; }
+  .section__primary-heading--blue {
+    color: var(--blue-main); }
+
+.section__secondary-heading {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 500;
+  margin: 2rem 6rem;
+  line-height: 1.4; }
+  .section__secondary-heading--left {
+    text-align: left;
+    margin: 0;
+    margin-bottom: 12rem; }
+
+@media only screen and (max-width: 600px) {
+  .section__primary-heading {
+    font-size: 3.5rem; }
+  .section__secondary-heading {
+    font-size: 1.8rem;
+    margin: 0; }
+  .section__secondary-heading--left {
+    font-size: 1.8rem;
+    margin-bottom: 4rem; } }
+
+/******************************FORM***********************************/
+.form__container {
+  width: 100%;
+  max-height: 94%;
+  margin: 2rem auto;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  padding: 1rem; }
+
+@media only screen and (max-width: 600px) {
+  .form__container {
+    width: 94%; } }
+
+.form__text {
+  font-size: 2.2rem;
+  color: #fff;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 1px; }
+
+.hero__form input {
+  display: block;
+  margin: 2rem 0;
+  width: 100%;
+  padding: 1rem;
+  font-size: 2rem;
+  font-family: inherit; }
+
+.form__button {
+  padding: 2rem;
+  width: 100%;
+  background-color: var(--red-main);
+  border: var(--red-main) 2px solid;
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 500;
+  font-family: inherit; }
+  .form__button:hover {
+    background-color: #ff4804;
+    border: #ff4804 2px solid;
+    cursor: pointer; }
+
+/******************************BUTTONS***********************************/
+.button__small--red {
+  display: inline-block;
+  color: #fff;
+  background-color: var(--red-main) !important;
+  padding: 1rem 2rem;
+  border-radius: 4rem;
+  text-decoration: none;
+  margin-right: 4rem;
+  margin-left: 0;
+  transition: all 0.5s;
+  box-shadow: none;
+  font-size: 1.8rem;
+  font-weight: 700;
+  animation: button-grow 1.5s infinite; }
+  .button__small--red:hover {
+    color: #fff;
+    margin-top: -3px;
+    box-shadow: 0.5rem 0.75rem 1.5rem rgba(0, 0, 0, 0.5); }
+  .button__small--red:active {
+    box-shadow: none; }
+
+@media only screen and (max-width: 600px) {
+  .button__small--red {
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    margin-right: 4rem;
+    margin-left: 1rem; } }
+
+.button__large--red {
+  display: inline-block;
+  font-size: 2.4rem;
+  font-weight: bolder;
+  color: #fff;
+  background: var(--red-main);
+  padding: 3rem;
+  border-radius: 6rem;
+  text-decoration: none;
+  transition: all 0.5s;
+  position: absolute;
+  top: 67%;
+  left: 50%;
+  transform: translateX(-50%); }
+  .button__large--red:hover {
+    color: #fff;
+    margin-top: -3px;
+    box-shadow: 0.5rem 0.75rem 1.5rem rgba(0, 0, 0, 0.5); }
+  .button__large--red:active {
+    margin: 0;
+    box-shadow: none; }
+
+@media only screen and (max-width: 800px) {
+  .button__large--red {
+    padding: 2rem; } }
+
+@media only screen and (max-width: 600px) {
+  .button__large--red {
+    width: 80%;
+    padding: 1.5rem 3rem;
+    font-size: 2rem; } }
+
+.button__medium--red {
+  text-decoration: none;
+  background-color: var(--red-main);
+  padding: 2rem 3.5rem;
+  color: #fff;
+  border-radius: 4rem;
+  font-size: 2rem;
+  font-weight: 700;
+  transition: all 0.5s; }
+  .button__medium--red:hover {
+    color: #fff;
+    margin-top: -3px;
+    box-shadow: 0.5rem 0.75rem 1.5rem rgba(0, 0, 0, 0.5); }
+  .button__medium--red:active {
+    margin: 0;
+    box-shadow: none; }
+
+/******************************ANIMATIONS***********************************/
+@keyframes button-grow {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.15); }
+  100% {
+    transform: scale(1); } }

@@ -1,0 +1,19 @@
+{
+  "name": "therock2020",
+  "version": "1.0.0",
+  "description": "The Rock For President ",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass":"node-sass scss/main.scss style.css -w"
+  },
+  "keywords": [
+    "Rock",
+    "Dwayne",
+    "Johnson"
+  ],
+  "author": "TMW",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  }
+}

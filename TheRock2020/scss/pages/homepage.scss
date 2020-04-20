@@ -1,0 +1,630 @@
+
+/******************************HERO***********************************/ 
+
+
+.hero {
+  height: calc(100vh - 5rem);
+  margin-top: 6rem;
+  background-image: linear-gradient(
+      to right,
+      var(--blue-main),
+      rgba(16, 48, 145, 0.85) 28%,
+      rgba(16, 48, 145, 0.85) 28%,
+      transparent 35%
+    ),
+    url(img/TheRock2020pic1.jpg);
+
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  font-family: "Raleway", sans-serif;
+
+  &__container {
+    width: 25%;
+    margin-left: 2rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__box {
+    padding: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    font-weight: 500;
+  }
+
+  &__star-container--white {
+    background-color: var(--red-main);
+    height: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__star--white {
+    display: inline-block;
+    height: 1.5rem;
+  }
+
+  &__primary-heading {
+    display: inline-block;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+  }
+
+  @media only screen and (max-width: 1600px) {
+    &__container {
+      width: 28%;
+    }
+  }
+  @media only screen and (max-width: 1395px) {
+    &__primary-heading {
+      font-size: 2.5rem;
+    }
+  }
+
+  @media only screen and (max-width: 1190px) {
+    &__container {
+      width: 30%;
+      margin-left: 1rem;
+    }
+    &__primary-heading {
+      font-size: 2.3rem;
+    }
+  }
+
+  @media only screen and (max-width: 1050px) {
+    &__container {
+      width: 32%;
+      margin-left: 1.5rem;
+    }
+    &__primary-heading {
+      font-size: 2.1rem;
+    }
+  }
+
+  @media only screen and (max-width: 900px) {
+    &__container {
+      width: 35%;
+    }
+  }
+
+  @media only screen and (max-width: 828px) {
+    &__container {
+      width: 40%;
+    }
+  }
+
+  &__star-container--red {
+    background-color: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    margin: 0 auto;
+  }
+
+  &__star--red {
+    display: inline-block;
+    height: 1.2rem;
+    margin-top: -1.2rem;
+  }
+
+  &__last-name {
+    display: inline-block;
+  }
+
+  &__secondary-heading {
+    margin-top: -1.2rem;
+    font-size: 5rem;
+    color: #fff;
+  }
+
+  @media only screen and (max-width: 1050px) {
+    &__secondary-heading {
+      font-size: 4rem;
+    }
+  }
+
+  &__text {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+}
+
+hr {
+  height: 5px;
+  width: 100%;
+  background-color: var(--red-main);
+  border: none;
+}
+
+@media only screen and (max-width: 900px) {
+  .hero {
+    background-image: linear-gradient(
+        to right,
+        var(--blue-main),
+        rgba(16, 48, 145, 0.85) 40%,
+        rgba(16, 48, 145, 0.85) 40%,
+        transparent 50%
+      ),
+      url(img/TheRock2020pic1.jpg);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  hr {
+    margin: 0 auto;
+    width: 84%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .hero {
+    background-image: none;
+    background-color: var(--blue-main);
+  }
+
+  .hero__container {
+    height: auto;
+    width: 100%;
+    padding: 2rem;
+    margin: 0;
+    background-color: var(--blue-main);
+  }
+
+  .hero__primary-heading {
+    font-size: 2.5rem;
+  }
+
+  .hero__secondary-heading {
+    font-size: 3.5rem;
+  }
+
+  .hero__star--red {
+    display: inline-block;
+    height: 1.2rem;
+    margin-top: -2em;
+  }
+
+  hr {
+//    width: 100%;
+    margin-bottom: 5px;
+  }
+}
+
+
+/******************************ABOUT***********************************/ 
+
+
+.about {
+  height: auto;
+  background-color: #fff;
+  padding: 10rem;
+  color: #000;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.92),
+      rgba(255, 255, 255, 0.92)
+    ),
+    url(img/americanFlagHorizontal.jpg);
+  background-size: cover;
+
+  &__box {
+    display: flex;
+    margin-top: 8rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__video {
+    width: 50%;
+    padding: 2rem;
+  }
+
+  &__text {
+    width: 50%;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  &__primary-heading {
+    font-size: 4rem;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  &__secondary-heading {
+    width: 80%;
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 1rem auto;
+    text-align: justify;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .about__box {
+    flex-direction: column;
+    margin-top: 6rem;
+  }
+
+  .about__video {
+    width: 100%;
+    order: 1;
+  }
+
+  .about__text {
+    order: 2;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .about {
+    padding: 2rem;
+    padding-top: 4rem;
+  }
+
+  .about__box {
+    margin: 2rem auto;
+  }
+
+  .about__primary-heading {
+    font-size: 2.5rem;
+  }
+
+  .about__secondary-heading {
+    font-size: 1.8rem;
+  }
+}
+
+
+
+/******************************GALLERY***********************************/ 
+
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  max-width: 100vw;
+  max-height: 100vh;
+  grid-template-areas:
+    "one three four"
+    "two three five";
+
+  &__item {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    transition: all 0.8s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:hover ~ .gallery__image-description {
+      opacity: 0;
+    }
+  }
+
+  &__image-description {
+    background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    );
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    font-family: "Raleway", sans-serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    padding: 1.6rem 0;
+    transition: all 0.8s;
+    text-transform: capitalize;
+  }
+}
+
+.gallery__item--1 {
+  grid-area: one;
+}
+
+.gallery__item--2 {
+  grid-area: two;
+}
+
+.gallery__item--3 {
+  grid-area: three;
+}
+
+.gallery__item--4 {
+  grid-area: four;
+}
+
+.gallery__item--5 {
+  grid-area: five;
+}
+
+@media only screen and (max-width: 800px) {
+  .gallery {
+    display: none;
+  }
+}
+
+
+/******************************QUOTE***********************************/ 
+
+.quote {
+  height: 100vh;
+  background: var(--blue-main);
+  text-align: center;
+  color: #fff;
+  position: relative;
+
+  &__jumbo {
+    width: 84%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 5.2rem;
+    font-weight: 800;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .quote__jumbo {
+    width: 90%;
+    font-size: 4.5rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .quote__jumbo {
+    height: 80vh;
+    font-size: 3rem;
+    top: 10%;
+  }
+}
+
+
+/******************************ISSUES***********************************/ 
+
+
+.issues {
+  height: auto;
+  padding: 10rem 6rem;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.92),
+      rgba(255, 255, 255, 0.92)
+    ),
+    url(img/americanFlagHorizontal.jpg);
+
+  &__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__box {
+    height: auto;
+    width: 32%;
+    margin: 2rem;
+    box-shadow: 0.5rem 0.75rem 1.5rem rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #fff;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 24rem;
+    background-size: cover;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 2rem 0 1.5rem 2rem;
+    text-align: left;
+
+    font-family: "Raleway", sans-serif;
+  }
+
+  &__text {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.8rem;
+    text-align: justify;
+    hyphens: auto;
+    padding: 0 2rem 2rem 2rem;
+    line-height: 1.4;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .issues__box {
+    width: 80%;
+    margin: 3rem auto;
+  }
+
+  .issues__container {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .issues__image {
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .issues {
+    padding: 2rem;
+  }
+
+  .issues__box {
+    width: 100%;
+    margin: 2rem auto;
+  }
+
+  .issues__text {
+    line-height: 1.2;
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+    .issues__container {
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .issues__box {
+        margin: 4rem;
+    }
+}
+
+
+/******************************UPCOMING EVENTS***********************************/ 
+
+
+.upcoming-events {
+  height: auto;
+  display: flex;
+  background: var(--blue-main);
+
+  &__heading-box {
+    width: 50%;
+    color: #fff;
+    position: relative;
+  }
+
+  &__inside-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+  }
+
+  &__image {
+    height: calc(100vh + 6rem);
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .upcoming-events__image {
+    width: 60%;
+  }
+
+  .section__primary-heading--left {
+    font-size: 5rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .upcoming-events {
+    flex-direction: column;
+  }
+
+  .upcoming-events__heading-box {
+    width: 100%;
+    background: var(--blue-main);
+    height: 80vh;
+  }
+
+  .upcoming-events__image {
+    height: auto;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .upcoming-events__heading-box {
+    width: 100%;
+    height: 70vh;
+  }
+}
+
+
+/******************************DONATE***********************************/ 
+
+.donate {
+  height: 44vh;
+  width: 100%;
+  background-color: var(--red-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6em;
+}
+
+.section__primary-heading--donations {
+  width: 50%;
+  color: #fff !important;
+}
+
+.section__secondary-heading--donations {
+  width: 50%;
+  color: #fff;
+  text-align: justify;
+  hyphens: auto;
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 980px) {
+  .donate {
+    padding-top: 4rem;
+  }
+
+  .section__primary-heading--donations {
+    font-size: 4rem;
+  }
+
+  .section__secondary-heading--donations {
+    width: 60%;
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .donate {
+    flex-direction: column;
+  }
+
+  .section__primary-heading--donations {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+
+  .section__secondary-heading--donations {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .donate {
+    padding: 3rem;
+    height: 60vh;
+  }
+}
